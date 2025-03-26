@@ -9,8 +9,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- Favicons -->
-    <link href="{{asset('Front')}}/assets/img/favicon.png" rel="icon">
-    <link href="{{asset('Front')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{asset('front')}}/assets/img/favicon.png" rel="icon">
+    <link href="{{asset('front')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -19,16 +19,16 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{asset('Front')}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{asset('Front')}}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="{{asset('Front')}}/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="{{asset('Front')}}/assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="{{asset('Front')}}/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="{{asset('Front')}}/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="{{asset('Front')}}/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{asset('Front')}}/assets/css/style.css" rel="stylesheet">
+    <link href="{{asset('front')}}/assets/css/style.css" rel="stylesheet">
 
     <!-- =======================================================
     * Template Name: NiceAdmin
@@ -52,7 +52,7 @@
                         <div class="d-flex align-items-center gap-4  fs-3 justify-content-center">
                             <div >
                                 <a href="index.html" class="logo justify-content-center d-flex align-items-center  ">
-                                    <img class="w-75" src="{{asset('Front')}}/assets/img/logo.png" alt="">
+                                    <img class="w-75" src="{{asset('front')}}/assets/img/logo.png" alt="">
 
                                 </a>
                             </div>
@@ -114,17 +114,17 @@
         class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="{{asset('Front')}}/assets/vendor/apexcharts/apexcharts.min.js"></script>
-<script src="{{asset('Front')}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="{{asset('Front')}}/assets/vendor/chart.js/chart.umd.js"></script>
-<script src="{{asset('Front')}}/assets/vendor/echarts/echarts.min.js"></script>
-<script src="{{asset('Front')}}/assets/vendor/quill/quill.min.js"></script>
-<script src="{{asset('Front')}}/assets/vendor/simple-datatables/simple-datatables.js"></script>
-<script src="{{asset('Front')}}/assets/vendor/tinymce/tinymce.min.js"></script>
-<script src="{{asset('Front')}}/assets/vendor/php-email-form/validate.js"></script>
+<script src="{{asset('front')}}/assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="{{asset('front')}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('front')}}/assets/vendor/chart.js/chart.umd.js"></script>
+<script src="{{asset('front')}}/assets/vendor/echarts/echarts.min.js"></script>
+<script src="{{asset('front')}}/assets/vendor/quill/quill.min.js"></script>
+<script src="{{asset('front')}}/assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="{{asset('front')}}/assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="{{asset('front')}}/assets/vendor/php-email-form/validate.js"></script>
 
 <!-- Template Main JS File -->
-<script src="{{asset('Front')}}/assets/js/main.js"></script>
+<script src="{{asset('front')}}/assets/js/main.js"></script>
 
 </body>
 
