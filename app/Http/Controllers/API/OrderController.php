@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\Api;
 
 use App\helper\Apihelper;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\API\OrderRequest;
+use App\Http\Requests\Api\OrderRequest;
 use App\Http\Resources\OrderhistoryResource;
 use App\Models\Order;
 use App\Models\OrderDetail;
