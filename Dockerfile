@@ -37,8 +37,6 @@ RUN php artisan key:generate
 # Cache config
 RUN php artisan config:cache
 
-# Run migrations (if needed)
-RUN php artisan migrate --force
 
 # Build frontend using Vite
 RUN npm install
