@@ -9,14 +9,11 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    unzip
-
-# 🟢 Install Node.js 18 manually (عشان apt القديم)
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
-    apt-get install -y nodejs
-
-# 🟢 Verify versions
-RUN node -v && npm -v
+    unzip \
+    libzip-dev \
+    libpq-dev \
+    npm \
+    nodejs
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
@@ -33,14 +30,26 @@ COPY . .
 # Install Laravel backend
 RUN composer install --no-dev --optimize-autoloader
 
-# ✅ Install Node modules & build Vite
-RUN npm install && npm run build
+# Copy env file and generate app key
+RUN cp .env.example .env
+RUN php artisan key:generate
 
-# Set permissions
+# Cache config
+RUN php artisan config:cache
+
+# Run migrations (if needed)
+RUN php artisan migrate --force
+
+# Build frontend using Vite
+RUN npm install
+RUN npm run build
+
+# Fix permissions
+RUN chmod -R 775 storage bootstrap/cache
 RUN chown -R www-data:www-data /var/www
 
 # Expose port
 EXPOSE 8000
 
-# Start the server
+# Start Laravel server
 CMD php artisan storage:link && php artisan serve --host=0.0.0.0 --port=8000
