@@ -65,7 +65,7 @@ Route::controller(TablereserveController::class)->middleware('auth:sanctum')->gr
 
 //favourite controller
 Route::controller(FavouriteController::class)->middleware('auth:sanctum')->group(function () {
-   Route::post('favourite', 'show')->name('favourite.get');
+   Route::get('favourite', 'show')->name('favourite.get');
    Route::post('favourite_store', 'store')->name('favourite.store');
    Route::post('favourite_delete', 'delete')->name('favourite.delete');
 
