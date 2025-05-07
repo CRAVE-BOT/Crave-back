@@ -74,6 +74,7 @@ Route::controller(FavouriteController::class)->middleware('auth:sanctum')->group
 Route::controller(CalroiesController::class)->middleware('auth:sanctum')->group(function () {
     Route::post('calories', 'show')->name('calories.get');
     Route::post('calories_store', 'store')->name('calories.store');
+    Route::post('calories_taked', 'showTodayCalories')->name('calories_taked_.get');
 
 });
 //Suggest controller

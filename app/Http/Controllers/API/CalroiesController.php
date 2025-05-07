@@ -174,4 +174,24 @@ class CalroiesController extends Controller
         $total=Calories::where('user_id',$id)->sum('total_calories');
         return Apihelper::sendrespone('200','Calories Calculated Successfully',['total_calories' => $total]);
     }
+    
+    public function showTodayCalories(Request $request)
+    {
+        $userId = $request->user()->id;
+
+        $todayOrderIds = Order::where('user_id', $userId)
+            ->whereDate('order_date', now()->toDateString())
+            ->pluck('id');
+        $totalCalories = DB::table('order_details')
+            ->join('products', 'order_details.product_id', '=', 'products.id')
+            ->whereIn('order_details.order_id', $todayOrderIds)
+            ->sum(DB::raw('order_details.quantity * products.total_calories'));
+
+        return Apihelper::sendrespone(
+            200,
+            'Total Calories for Today',
+            ['total_calories' => $totalCalories]
+        );
+    }
+
 }
