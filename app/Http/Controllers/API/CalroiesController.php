@@ -6,10 +6,12 @@ use App\helper\Apihelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\calroiesrequest;
 use App\Models\Calories;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Sugest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CalroiesController extends Controller
 {
