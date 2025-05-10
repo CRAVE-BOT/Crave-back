@@ -25,4 +25,10 @@ class TablereserveController extends Controller
             return Apihelper::sendrespone('201','Booking Table Successfully Created',null);
         }
     }
+     public function last_reserve(Request $request){
+            $userId = $request->user()->id;
+            $last=TableReserve::where('user_id', $userId)->latest()->first();
+            return Apihelper::sendrespone('200','The last table reserve of user here ',new TableReserveResource($last));
+
+        }
 }

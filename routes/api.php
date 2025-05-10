@@ -61,6 +61,8 @@ Route::controller(TableController::class)->group(function () {
 //Table_reserve
 Route::controller(TablereserveController::class)->middleware('auth:sanctum')->group(function () {
    Route::post('table_reserve', 'store')->name('table_reserves.store');
+    Route::get('table_reserve/latest', 'last_reserve')->name('table_reserves.latest');
+
 });
 
 //favourite controller
