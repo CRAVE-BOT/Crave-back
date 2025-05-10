@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\helper\Apihelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\TableRequest;
+use App\Http\Resources\TableReserveResource;
 use App\Models\Table;
 use App\Models\TableReserve;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class TablereserveController extends Controller
             return Apihelper::sendrespone('201','Booking Table Successfully Created',null);
         }
     }
-     public function last_reserve(Request $request){
+        public function last_reserve(Request $request){
             $userId = $request->user()->id;
             $last=TableReserve::where('user_id', $userId)->latest()->first();
             return Apihelper::sendrespone('200','The last table reserve of user here ',new TableReserveResource($last));
