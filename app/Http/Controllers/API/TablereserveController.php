@@ -30,7 +30,7 @@ class TablereserveController extends Controller
             $userId = $request->user()->id;
             $last=TableReserve::where('user_id', $userId)->latest()->first();
             if (!$last) {
-    return ApiHelper::sendresponse(404, 'No table reservation found for this user',null);
+             return ApiHelper::sendrespone(404, 'No table reservation found for this user',null);
 }
 
             return Apihelper::sendrespone('200','The last table reserve of user here ',new TableReserveResource($last));
