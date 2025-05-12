@@ -81,7 +81,7 @@ Route::controller(CalroiesController::class)->middleware('auth:sanctum')->group(
 });
 //Suggest controller
 Route::controller(SuggestController::class)->middleware('auth:sanctum')->group(function () {
-    Route::post('suggest', 'show')->name('suggest.show');
+    Route::get('suggest', 'show')->name('suggest.show');
 });
 
 //Order Contoller
