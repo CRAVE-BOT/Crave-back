@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\helper\Apihelper;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\API\calroiesrequest;
+use App\Http\Requests\Api\calroiesrequest;
 use App\Models\Calories;
 use App\Models\Order;
 use App\Models\Product;
