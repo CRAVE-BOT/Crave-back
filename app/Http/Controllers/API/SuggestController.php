@@ -13,6 +13,6 @@ class SuggestController extends Controller
     public function show(request $request){
        $id=$request->user()->id;
        $data=Sugest::where("user_id",$id)->get();
-        return Apihelper::sendrespone('200','your meals here',SuggestResource::collection($data));
+          return Apihelper::sendrespone('200','your meals here',SuggestResource::collection($data));
     }
 }
