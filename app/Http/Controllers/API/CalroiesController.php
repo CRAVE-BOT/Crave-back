@@ -175,7 +175,14 @@ class CalroiesController extends Controller
     {
         $id=$request->user()->id;
         $total=Calories::where('user_id',$id)->sum('total_calories');
-        return Apihelper::sendrespone('200','Calories Calculated Successfully',['total_calories' => $total]);
+        return Apihelper::sendrespone('200',
+            'Calories Calculated Successfully',
+            [
+                'total_calories' => $total,
+                'Protein' => round(($total * 0.3) / 4, 2),
+                'Carb' => round(($total * 0.4) / 4, 2),
+                'Fat' => round(($total * 0.3) / 9, 2),
+            ]);
     }
 
     
