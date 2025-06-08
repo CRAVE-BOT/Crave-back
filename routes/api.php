@@ -11,6 +11,7 @@ use App\Http\Controllers\API\SuggestController;
 use App\Http\Controllers\API\TableController;
 use App\Http\Controllers\API\TablereserveController;
 use App\Http\Controllers\ChatbotController;
+use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\Theme\AnalyticsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -97,4 +98,7 @@ Route::controller(AnalyticsController::class)->group(function () {
     Route::get('/Crave-analytics', [AnalyticsController::class, 'getDashboardStats']);
 
 });
+
+Route::post('/login/google', [GoogleAuthController::class, 'loginWithGoogle']);
+
 
